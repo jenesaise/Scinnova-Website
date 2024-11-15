@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  color: #ffffff;
+  background-color: #0b0c10;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 60px;
+}
+
+.top-right-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.top-right-nav a {
+  color: #FFD700; 
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+.top-right-nav a:hover {
+  color: #ffffff; 
+  border-bottom: 2px solid #FFD700;
+}
+
+.full-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('assets/moon.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  animation: fadeInUp 1s forwards;
+}
+
+.content p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.content h1 {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.content h1 span {
+  color: #FFD700;
+}
+
+.launch-time {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.launch-time div {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.launch-time div p {
+  font-size: 36px;
+  color: #FFD700;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.launch-time span {
+  font-size: 14px;
+  color: #dcdcdc;
+  text-transform: uppercase;
+}
+
+button {
+  background: linear-gradient(to right, #FFD700, #FF4500);
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+}
+
+#about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  min-height: 100vh;
+  background-image: url('assets/Untitled design.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 8px;
+  animation: fadeInUp 1s forwards;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#about h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#about h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #dcdcdc;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f0f0f0;
+  text-align: justify;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 32px;
+  }
+  #about h3 {
+    font-size: 24px;
+  }
+  #about h4 {
+    font-size: 18px;
+  }
+  #about p {
+    font-size: 14px;
+  }
+}
+
+#modules {
+  position: relative;
+  height: 100vh;
+  background-image: url('assets/untitled-design.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.modules-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.module-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
+  background-size: cover;
+  background-position: center;
+}
+
+.module-slide.active {
+  opacity: 1; 
+}
+
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border: none;
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+footer {
+  background-color: #0b0c10;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: #FFD700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
